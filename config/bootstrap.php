@@ -86,7 +86,8 @@ if (!Configure::read('debug')) {
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
  */
-date_default_timezone_set('UTC');
+// date_default_timezone_set('UTC');
+date_default_timezone_set('Asia/Tokyo');
 
 /**
  * Configure the mbstring extension to use the correct encoding.
@@ -201,3 +202,11 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('date')->useLocaleParser();
 Type::build('datetime')->useLocaleParser();
+
+Cake\I18n\Time::setToStringFormat('yyyy-MM-dd HH:mm');
+Cake\I18n\Time::setJsonEncodeFormat('yyyy-MM-dd HH:mm:ss');
+
+Plugin::load('Crud');
+Plugin::load('BootstrapUI');
+Plugin::load('ADmad/JwtAuth');
+Plugin::load('BuiBaker'); // only bake view
