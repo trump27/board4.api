@@ -1,4 +1,9 @@
 /vendor/*
 /config/app.php
-#/tmp/*
-#/logs/*
+/tmp/*
+/logs/*
+/node_modules
+/coverage
+/.settings
+/.buildpath
+/.project
