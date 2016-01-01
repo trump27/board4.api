@@ -1,0 +1,163 @@
+#contents {
+  padding-left: 200px;
+  position: relative;
+  transition: all 0.4s ease 0s;
+}
+.main-content {
+  width: 100%;
+  padding: 15px 30px;
+}
+.subnav {
+  padding-top: 15px;
+}
+footer {
+  padding: 10px 30px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #be140b;
+}
+.index > .paginator {
+  padding: 0px 20px;
+}
+.form fieldset {
+  padding: 15px 20px;
+}
+.required > label {
+  font-weight: bold;
+}
+.required > label:after {
+  content: ' *';
+  color: #c3232d;
+}
+.panel .view {
+  padding: 15px;
+}
+.vertical-table {
+  vertical-align: middle;
+}
+.vertical-table th {
+  border: none;
+  text-align: left;
+  width: 30%;
+}
+.vertical-table td {
+  text-align: left;
+}
+div.related {
+  padding: 20px;
+}
+#menu-toggle {
+  display: none;
+}
+#sidebar {
+  margin-left: -200px;
+  left: 200px;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  z-index: 1001;
+  background: #333;
+  transition: all 0.4s ease 0s;
+}
+#sidebar a {
+  text-decoration: none;
+  display: block;
+}
+#sidebar .brand {
+  text-align: center;
+  font-size: 24px;
+  background-image: linear-gradient(to bottom, #363636, #272727);
+  color: #ccc;
+  height: 65px;
+  line-height: 65px;
+}
+#sidebar .brand a {
+  color: #ccc;
+}
+#sidebar ul {
+  padding: 0;
+}
+#sidebar li {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 20px;
+  background-image: linear-gradient(to bottom, #464349, #3e3b41);
+}
+#sidebar li .glyphicon {
+  margin-right: 0.5em;
+}
+#sidebar li.active .glyphicon {
+  color: #4d91cd;
+}
+#sidebar li.active > a {
+  color: #fff;
+}
+#sidebar li:hover {
+  background: rgba(255,255,255,0.2);
+}
+#sidebar li:hover .glyphicon {
+  color: #4d91cd;
+}
+#sidebar li a {
+  color: #aaa;
+  display: block;
+}
+#sidebar li a:hover {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #contents {
+    padding-left: 0;
+  }
+  #sidebar {
+    left: 0;
+  }
+  #contents.active {
+    position: relative;
+    left: 200px;
+  }
+  #contents.active #sidebar {
+    left: 200px;
+    width: 200px;
+    transition: all 0.4s ease 0s;
+  }
+  #menu-toggle {
+    display: inline-block;
+  }
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin div.text {
+  margin-bottom: 0 !important;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+form.searchbox {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+form.searchbox div label,
+form.searchbox a {
+  margin-left: 1em;
+  margin-right: 1em;
+}

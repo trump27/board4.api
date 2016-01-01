@@ -1,0 +1,126 @@
+$color-title = #be140b
+$brand-height = 65px
+$sidebar-width = 200px
+$active-glyphicon-color = lighten(#2e6da4,24%)
+
+#contents
+  padding-left $sidebar-width
+  position relative
+  transition all 0.4s ease 0s
+
+.main-content
+  width 100%
+  padding 15px 30px
+
+.subnav
+  padding-top 15px
+
+footer
+  padding 10px 30px
+
+h1,h2,h3,h4,h5,h6
+  color $color-title
+
+// index
+.index > .paginator
+  padding 0px 20px
+
+// form
+.form fieldset
+  padding 15px 20px
+
+.required > label
+  font-weight bold
+
+.required > label:after
+  content ' *'
+  color #C3232D
+
+// view
+.panel
+  .view
+    padding 15px
+
+.vertical-table
+  vertical-align middle
+  th
+    border none
+    text-align left
+    width 30%
+  td
+    text-align left
+
+div.related
+  padding 20px
+
+// side menu
+#menu-toggle
+  display none
+
+#sidebar
+  margin-left - $sidebar-width //minus
+  left $sidebar-width
+  width $sidebar-width
+  position fixed
+  height 100%
+  z-index 1001
+  background #333
+  transition all 0.4s ease 0s
+  a
+    text-decoration none
+    display block
+  .brand
+    // margin-top 35px
+    // margin-bottom 25px
+    text-align center
+    // padding-left 10px
+    font-size 24px
+    // background-image linear-gradient(to bottom, darken(#C3232D, 12), darken(#C3232D, 18))
+    background-image linear-gradient(to bottom, darken(#555, 12), darken(#555, 18))
+    color #ccc
+    height $brand-height
+    line-height $brand-height
+    a
+      color #ccc
+  ul
+    padding 0
+  li
+    display block
+    height 35px
+    line-height 35px
+    padding-left 20px
+    background-image linear-gradient(to bottom, #464349, #3e3b41)
+    .glyphicon
+      margin-right 0.5em
+    &.active
+      .glyphicon
+        color $active-glyphicon-color
+      > a
+        color #fff
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+      .glyphicon
+        color $active-glyphicon-color
+    a
+      color #aaa
+      display block
+      &:hover
+        color #fff
+
+@media (max-width: 767px)
+  #contents
+    padding-left 0
+  #sidebar
+    left 0
+  #contents.active
+    position relative
+    left $sidebar-width
+  #contents.active #sidebar
+    left $sidebar-width
+    width $sidebar-width
+    transition all 0.4s ease 0s
+  #menu-toggle
+    display inline-block
+
+@import '_signin.styl'
+@import '_other.styl'

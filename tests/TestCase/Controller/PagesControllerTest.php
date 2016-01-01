@@ -35,6 +35,7 @@ class PagesControllerTest extends IntegrationTestCase
      */
     public function testDisplay()
     {
+        $this->session(['Auth.User.id' => 1]);
         $this->get('/pages/home');
         $this->assertResponseOk();
         $this->assertResponseContains('CakePHP');
@@ -48,6 +49,7 @@ class PagesControllerTest extends IntegrationTestCase
      */
     public function testMissingTemplate()
     {
+        $this->session(['Auth.User.id' => 1]);
         Configure::write('debug', false);
         $this->get('/pages/not_existing');
 
@@ -62,6 +64,7 @@ class PagesControllerTest extends IntegrationTestCase
      */
     public function testMissingTemplateInDebug()
     {
+        $this->session(['Auth.User.id' => 1]);
         Configure::write('debug', true);
         $this->get('/pages/not_existing');
 

@@ -7,3 +7,5 @@
 /.settings
 /.buildpath
 /.project
+/db.sqlite
+/test_db.sqlite

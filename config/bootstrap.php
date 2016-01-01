@@ -210,3 +210,4 @@ Plugin::load('Crud');
 Plugin::load('BootstrapUI');
 Plugin::load('ADmad/JwtAuth');
 Plugin::load('BuiBaker'); // only bake view
+Plugin::load('Search');
