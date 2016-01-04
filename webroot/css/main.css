@@ -11,7 +11,9 @@
   padding-top: 15px;
 }
 footer {
+  text-align: right;
   padding: 10px 30px;
+  font-size: 1rem;
 }
 h1,
 h2,
@@ -92,17 +94,14 @@ div.related {
 #sidebar li .glyphicon {
   margin-right: 0.5em;
 }
+#sidebar li.active {
+  background-image: linear-gradient(to bottom, #373439, #2f2c31);
+}
 #sidebar li.active .glyphicon {
   color: #4d91cd;
 }
-#sidebar li.active > a {
-  color: #fff;
-}
 #sidebar li:hover {
   background: rgba(255,255,255,0.2);
-}
-#sidebar li:hover .glyphicon {
-  color: #4d91cd;
 }
 #sidebar li a {
   color: #aaa;
@@ -152,12 +151,9 @@ div.related {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-form.searchbox {
-  margin-top: 1em;
-  margin-bottom: 1em;
+div.filter-box {
+  margin: 1em;
 }
-form.searchbox div label,
-form.searchbox a {
+div.filter-box a.reset {
   margin-left: 1em;
-  margin-right: 1em;
 }

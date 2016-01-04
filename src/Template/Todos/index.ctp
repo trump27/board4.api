@@ -12,13 +12,13 @@
 <div class="todos index content panel panel-default">
     <div class="panel-heading"><?= __('Todos') ?></div>
     <div class="clearfix"></div>
-    <div>
+    <div class="filter-box">
         <?php
-            echo $this->Form->create('Todos', ['class'=>'form-inline searchbox']);
-            echo $this->Form->input('user_id', ['label'=>'Search', 'empty'=>'---']);
+            echo $this->Form->create('Todos', ['class'=>'form-inline']);
+            echo $this->Form->input('user_id', ['label'=>false, 'empty'=>'---']);
             echo $this->Form->input('q', ['label'=>false, 'placeholder'=>'keyword']);
             echo $this->Form->button('Filter', ['type' => 'submit']);
-            echo $this->Html->link('Reset', ['action' => 'index']);
+            echo $this->Html->link('Reset', ['action' => 'index'], ['class'=>'reset']);
             echo $this->Form->end();
         ?>
     </div>

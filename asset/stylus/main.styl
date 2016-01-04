@@ -16,7 +16,9 @@ $active-glyphicon-color = lighten(#2e6da4,24%)
   padding-top 15px
 
 footer
+  text-align right
   padding 10px 30px
+  font-size 1rem
 
 h1,h2,h3,h4,h5,h6
   color $color-title
@@ -93,14 +95,15 @@ div.related
     .glyphicon
       margin-right 0.5em
     &.active
+      background-image linear-gradient(to bottom, darken(#464349,6), darken(#3e3b41,6))
       .glyphicon
         color $active-glyphicon-color
-      > a
-        color #fff
+      // > a
+      //   color #fff
     &:hover
-      background: rgba(255, 255, 255, 0.2)
-      .glyphicon
-        color $active-glyphicon-color
+      background rgba(255, 255, 255, 0.2)
+      // .glyphicon
+      //   color $active-glyphicon-color
     a
       color #aaa
       display block

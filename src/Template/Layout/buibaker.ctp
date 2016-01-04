@@ -55,7 +55,7 @@
     </div>
 
 
-    <footer class="text-right">
+    <footer>
         &copy; <?= date('Y') ?> &nbsp; trump27
     </footer>
 
