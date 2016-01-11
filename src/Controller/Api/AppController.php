@@ -34,10 +34,12 @@ class AppController extends Controller
         ]
     ];
 
-    // public function beforeFilter(Event $event)
-    // {
-
-    // }
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        if (empty($this->request->params['_ext']))
+            $this->request->params['_ext'] = 'json';
+    }
 
     // public function beforeFilter(Event $event)
     public function initialize()
