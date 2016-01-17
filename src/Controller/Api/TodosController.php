@@ -6,14 +6,14 @@ use Cake\Event\Event;
 
 class TodosController extends AppController
 {
-    public $paginate = [
-        'page' => 1,
-        'limit' => 5,
-        'maxLimit' => 15,
-        'sortWhitelist' => [
-            'id', 'name'
-        ]
-    ];
+    // public $paginate = [
+    //     'page' => 1,
+    //     'limit' => 5,
+    //     'maxLimit' => 15,
+    //     'sortWhitelist' => [
+    //         'id', 'name'
+    //     ]
+    // ];
 
     // public function initialize()
     // {
@@ -40,7 +40,7 @@ class TodosController extends AppController
     public function index()
     {
         $this->Crud->on('beforePaginate', function(\Cake\Event\Event $event) {
-            $this->paginate['conditions']['user_id'] = 1;
+            $this->paginate['conditions']['user_id'] = $this->Auth->User('id');
             // $this->paginate['finder'] = [
             //     'ApiIndex' => ['user_id' => 1]
             // ];
@@ -71,6 +71,9 @@ class TodosController extends AppController
 
     public function add()
     {
+        $this->Crud->on('beforeSave', function(\Cake\Event\Event $event) {
+            $event->subject->entity['user_id'] = $this->Auth->User('id');
+        });
         $this->Crud->on('afterSave', function(\Cake\Event\Event $event) {
             if ($event->subject->created) {
                 $this->set('data', [
