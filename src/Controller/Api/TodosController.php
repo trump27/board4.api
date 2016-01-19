@@ -77,7 +77,8 @@ class TodosController extends AppController
         $this->Crud->on('afterSave', function(\Cake\Event\Event $event) {
             if ($event->subject->created) {
                 $this->set('data', [
-                    'id' => $event->subject->entity->id
+                    'id' => $event->subject->entity->id,
+                    'user_id' => $event->subject->entity->user_id
                 ]);
                 $this->Crud->action()->config('serialize.data', 'data');
             }
